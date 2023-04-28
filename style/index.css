@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#logo {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EFF1F3;
+    height: 80px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 700px;
+    align-items: center;
+    background-image: url(../assets/content-images/header1.jpg);
+    background-size:  cover;
+    background-repeat: no-repeat;
+    
+}
+
+.header div {
+    color: #EFF1F3;
+    width: 300px;
+    margin: 300px;
+}
