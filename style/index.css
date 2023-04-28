@@ -7,23 +7,6 @@ html, body {
     font-family: 'Sarala', sans-serif;
 }
 
-#logo {
-    height: 50px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #EFF1F3;
-    height: 80px;
-}
-
-.navbar ul li {
-    display: inline-block;
-    margin: 10px;
-}
-
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,10 +35,10 @@ html, body {
 
 
 .header-slider {
-    transition: transform 0.5s ease-in-out;
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header-content h1 {
@@ -86,13 +69,40 @@ html, body {
     cursor: pointer;
 }
 
-.btn-slider-header {
+.btn-slider-header-1, .btn-slider-header-2 {
+    color: #272727;
     border: none;
     cursor: pointer;
     background-color: transparent;
 }
 
-@media (max-width: 768px) {
+.active-img {
+    color: #009FB7;
+}
+
+
+@media (max-width: 750px) {
+
+    .header-slider {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .header-content {
+        margin-right: 50px;
+    }
+    
+
+    
+    .btns-slider-header {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        margin: 20px;
+    }
+    
+
     
 }
 

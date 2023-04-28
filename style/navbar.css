@@ -1,0 +1,57 @@
+#logo {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+    background-color: #EFF1F3;
+    height: 80px;
+    width: 100%;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.nav-icon {
+    color: #272727;
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .navbar ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background-color: #272727;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .active-nav ul {
+        display: block;
+    }
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+    }
+    
+    
+}
