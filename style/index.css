@@ -1,7 +1,10 @@
-* {
+html, body {
     padding: 0;
     margin: 0;
-    border: 0;
+    box-sizing: border-box;
+    background: #EFF1F3;
+    font-family: 'Righteous', cursive;
+    font-family: 'Sarala', sans-serif;
 }
 
 #logo {
@@ -27,14 +30,57 @@
     width: 100%;
     height: 700px;
     align-items: center;
-    background-image: url(../assets/content-images/header1.jpg);
-    background-size:  cover;
-    background-repeat: no-repeat;
+}
+
+.header-content span {
+    color: #FED766;
+}
+
+
+.header-slider {
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+  
+
+.header-content {
+    background-color: #272727;
+    padding: 30px;
+    border-radius: 8px;
+    color: #EFF1F3;
+    height: 300px;
+    width: 300px;
+    text-align: right;
+    margin-right: 20%;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header-content span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.header-content p {
+    font-size: 15px;
+}
+
+
+
+.btn {
+    border: none;
+    background-color: #009FB7;
+    color:#EFF1F3;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
     
 }
 
-.header div {
-    color: #EFF1F3;
-    width: 300px;
-    margin: 300px;
-}
