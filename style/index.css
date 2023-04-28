@@ -83,18 +83,21 @@ html, body {
 
 @media (max-width: 750px) {
 
+    .header {
+        height: 400px;
+    }
+
     .header-slider {
         width: 100%;
-        background-size: cover;
+        position: relative;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .header-content {
-        margin-right: 50px;
+        margin: 200px 50px 0 0;
     }
-    
-
     
     .btns-slider-header {
         grid-row: 3 / 4;
