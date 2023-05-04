@@ -69,7 +69,7 @@ html, body {
     cursor: pointer;
 }
 
-.btn-slider-header-1, .btn-slider-header-2 {
+.btn-slider-header {
     color: #272727;
     border: none;
     cursor: pointer;
@@ -80,19 +80,41 @@ html, body {
     color: #009FB7;
 }
 
+.main-diferenciais {
+    margin-top: 20px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.diferenciais-icone {
+    color: #009FB7;
+}
+
+.diferenciais-item {
+    color:#272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 10px;
+    border-radius: 8px;
+    width: 200px;
+    background-color: azure;
+    gap: 20px;
+}
 
 @media (max-width: 750px) {
 
     .header {
-        height: 400px;
-    }
-
-    .header-slider {
+        height: 700px;
         width: 100%;
-        position: relative;
         background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+        background-position: 75% 15%;
     }
 
     .header-content {
@@ -104,8 +126,11 @@ html, body {
         grid-column: 2 / 3;
         margin: 20px;
     }
-    
 
-    
+    .diferenciais-item {
+        padding: 20px;
+        gap: 20px;
+    }
+
 }
 
