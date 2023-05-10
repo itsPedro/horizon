@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="https://itspedro.github.io/horizon/assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/85395ab2d8.js" crossorigin="anonymous"></script>
     <title>Horizon</title>
     <link rel="stylesheet" href="./style/index.css">
@@ -16,16 +16,23 @@
 <body>
     <nav class="navbar">
         <a href="#">
-            <img src="./assets/Horizon-logo.png" alt="Horizon Logo" id="logo">
+            <img src="./assets/favicon.ico" alt="Horizon Logo" id="logo">
         </a>
         <div class="nav-icon"><i class="fa-solid fa-bars"></i></div>
-        <ul>
+
+        <div class="nav-links">
+          <ul>
             <li><a class="nav-link" href="#"> Inicio</li></a>
             <li><a class="nav-link" href="#diferenciais">Diferenciais</li></a>
             <li><a class="nav-link" href="#unidades">Unidades</li></a>
             <li><a class="nav-link" href="#comentarios">Comentários</li></a>
             <li><a class="nav-link" href="#contato">Contato</li></a>
-        </ul>
+          </ul>
+          <span class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </span>
+        </div>
     </nav>
     <div class="header header-slider">
         
@@ -38,10 +45,63 @@
 
     </div>
 
-    <div href="diferenciais" class="main-diferenciais">
-        <h1 id="dif-title">Nossos Diferenciais</h1>
-        <!-- <p>Temos como principais diferenciais a valorização da música, esporte e arte como ferramentas para o desenvolvimento pessoal e educacional dos estudantes.</p> -->
+    <div href="diferenciais" class="main-cards">
+
+          <h2>Nossos Diferenciais</h2>
+
+          <div class="container">
+            <div class="container-cards">
+              <div class="card">
+                <i class="fa-solid fa-volleyball"></i>
+                <p class="info">Esportes</p>
+                <p class="description">
+                  Aulas que ajudam a desenvolver habilidades físicas, como coordenação motora, 
+                  força e resistência, além de ensinar valores como disciplina, respeito e espírito de equipe.
+                </p>
+              </div>
+
+              <div class="card">
+                <i class="fa-solid fa-guitar"></i>
+                <p class="info">Música</p>
+                <p class="description">
+                  Aulas de instrumentos musicais, canto, teoria musical e outras atividades 
+                  que ajudam a desenvolver a habilidade musical dos alunos.
+                </p>
+              </div>
+            </div>
+
+            <div class="container-cards">
+              <div class="card">
+                <i class="fa-solid fa-palette"></i>
+                <p class="info">Arte</p>
+                <p class="description">
+                  Aulas de artes plásticas, teatro, dança e outras atividades que 
+                  ajudam a desenvolver a criatividade e a expressão artística dos alunos.
+                </p>
+              </div>
+              <div class="card">
+                <i class="fa-solid fa-language"></i>
+                <p class="info">Línguas</p>
+                <p class="description">
+                  Aulas de idiomas que ajudam a desenvolver a comunicação em outras línguas, 
+                  ampliando as possibilidades de comunicação e relacionamento com pessoas de outras culturas.
+                </p>
+              </div>
+            </div>
+
+          </div>
     </div>
+
+    <div href="unidades" class="main-unidades">
+
+      <h2>Unidades</h2>
+
+      <div class="unit-imgs"></div>
+
+
+    </div>
+
+
 
     <script src="./index.js"></script>
 </body>

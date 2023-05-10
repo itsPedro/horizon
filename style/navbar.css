@@ -9,9 +9,16 @@
     position: fixed;
     z-index: 1;
     background-color: #EFF1F3;
-    height: 80px;
+    height: 70px;
     width: 100%;
 }
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 
 .navbar ul li {
     display: inline-block;
@@ -21,7 +28,30 @@
 .navbar ul li a {
     text-decoration: none;
     transition: 0.3s ease;
+    color: #272727;
 }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 3px;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    color: #009FB7;
+}
+
+
+
+.social-links a:hover {
+    color: #EFF1F3;
+    background-color: #009FB7;
+}
+
 
 .nav-icon {
     color: #272727;
@@ -30,22 +60,41 @@
 
 @media (max-width: 1024px) {
 
-    .navbar ul {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 70px;
         margin: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: #EFF1F3;
+        right: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
         width: 100%;
-        background-color: #272727;
-        text-align: center;
+        flex-direction: column;
+        align-items: end;
+        gap: 30px;
+        margin-right: 20px;
     }
 
-    .navbar ul li {
-        display: block;
+    .social-links {
+        margin-right: 20px;
     }
 
-    .active-nav ul {
-        display: block;
+    .active-nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-end;
+        gap: 20px;
+        transition: all 0.2s ease;
     }
 
     .nav-icon {
