@@ -64,6 +64,7 @@
         justify-content: space-between;
     }
 
+
     .nav-links {
         display: none;
         position: absolute;
@@ -72,6 +73,7 @@
         width: 50%;
         height: 100vh;
         background-color: #EFF1F3;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         right: 0;
     }
 
@@ -100,7 +102,20 @@
     .nav-icon {
         display: block;
         cursor: pointer;
+        margin-right: 30px;
+        padding: 5px;
+        border-radius: 8px;
     }
-    
+
+    .nav-icon:hover{
+        background-color:#009FB7;
+        color: #EFF1F3;
+    }
+
+    #logo {
+        display: block;
+        cursor: pointer;
+        margin-left: 30px;
+    }
     
 }
