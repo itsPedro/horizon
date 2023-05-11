@@ -9,6 +9,7 @@
     position: fixed;
     z-index: 1;
     background-color: #EFF1F3;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
     height: 70px;
     width: 100%;
 }
@@ -27,7 +28,6 @@
 
 .navbar ul li a {
     text-decoration: none;
-    transition: 0.3s ease;
     color: #272727;
 }
 
@@ -39,9 +39,10 @@
 
 .social-links a {
     text-decoration: none;
-    padding: 3px;
-    transition: 0.3s ease;
-    border-radius: 8px;
+    width: 5px;
+    height: 5px;
+    padding: 5px;
+    border-radius: 50%;
     color: #009FB7;
 }
 
@@ -96,7 +97,6 @@
         justify-content: start;
         align-items: flex-end;
         gap: 20px;
-        transition: all 0.2s ease;
     }
 
     .nav-icon {

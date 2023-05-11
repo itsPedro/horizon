@@ -1,5 +1,7 @@
 const headerIMG = document.querySelector('.header');
 const menuIcon = document.querySelector('.nav-icon');
+const unitContent = document.querySelector('.main-unidades');
+const imgContent = document.querySelector('.unit-imgs');
 
 class headerSlider {
 
@@ -72,24 +74,91 @@ menuIcon.addEventListener('click', () => {
 //     #currentImgIndex = 0;
 //     buttons;
 
-//     constructor(url) {
-//         this.url = url;
-//         this.drawnIMG();
+//     constructor(images) {
+//         this.images = images;
+//         this.createSlider();
 //     }
 
+//     createSlider() {
+//         this.drawnIMG();
+//         this.createBtn();
+//         this.activeBtn();
+//     };
+
+
 //     drawnIMG() {
-//         this.url.map((img, index) => {
-//             this.#currentImgIndex = index;
-//             img = document.createElement('img');
-//             img.classList.add('unit-img');
-//             img.src = this.url[index];
-//             document.querySelector('.unit-imgs').appendChild(img);
+
+//         imgContent.innerHTML = this.images.map((img, index) => {
+//             if (index === this.#currentImgIndex) {
+//                 return `
+//                 <div class="unit-img on">
+//                     <img src="${img.url}">
+//                     <div class="unit-info">
+//                         <h2>${img.cidade}</h2>
+//                         <p>${img.rua}</p>
+//                         <p>${img.telefone}</p>
+//                     </div>
+//                 </div>
+//                 `
+//             } else {
+//                 return `
+//                 <div class="unit-img border">
+//                 <img src="${img.url}">
+//                 <div class="unit-info">
+//                   <h3>${img.cidade}</h3>
+//                   <p>${img.rua}</p>
+//                   <p>${img.telefone}</p>
+//                 </div>
+//                 `
+//             }
+
 //         });
 //     }
+
+
+//     createBtn() {
+//         this.buttonContainer = document.createElement('div');
+//         this.buttonContainer.classList.add('btns-slider-units');
+//         unitContent.appendChild(this.buttonContainer);
+//         this.buttons = this.images.map((btn, index) => {
+//             btn = document.createElement('button');
+//             btn.classList.add('btn-slider-header');
+//             btn.innerHTML = '<i class="fa-solid fa-circle-dot"></i>';
+//             this.buttonContainer.appendChild(btn);
+//             btn.addEventListener('click', () => {
+//                 this.#currentImgIndex = index;
+//                 this.createSlider();
+//             });
+//             return btn;
+//         });
+//     }
+
+//     activeBtn() {
+//         this.buttons.forEach((btn, index) => {
+//             index === this.#currentImgIndex ? btn.classList.add('active-img') : btn.classList.remove('active-img');
+//         });
+//     }
+
+
 // }
 
 // let allIMG = new unitImgs([
-//     "https://placehold.co/600x400?text=Serviço+1&font=roboto",
-//     "https://placehold.co/600x400?text=Serviço+2&font=roboto",
-//     "https://placehold.co/600x400?text=Serviço+3&font=roboto",
+//     {
+//         url: "./assets/content-images/unit-1.jpg",
+//         cidade: "Cidade",
+//         rua: "Rua",
+//         telefone: "Telefone"
+//     },
+//     {
+//         url: "./assets/content-images/unit-2.jpg",
+//         cidade: "Cidade",
+//         rua: "Rua",
+//         telefone: "Telefone"
+//     },
+//     {
+//         url: "./assets/content-images/unit-3.jpg",
+//         cidade: "Cidade",
+//         rua: "Rua",
+//         telefone: "Telefone"
+//     },
 // ]);
