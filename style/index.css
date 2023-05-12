@@ -259,6 +259,11 @@ html, body {
         flex-direction: column;
     }
 
+    .unit-content img {
+        height: 200px;
+        width: 450px;
+    }
+
 
 }
 
