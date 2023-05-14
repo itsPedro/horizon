@@ -1,4 +1,4 @@
-import { getQuestionsList } from "../../utils/misc.js";
+import { getQuestionsList } from "https://itspedro.github.io/horizon/utils/misc.js";
 
 const section = document.querySelector('.questions');
 

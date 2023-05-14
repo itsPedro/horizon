@@ -1,4 +1,4 @@
-import { getSliderList } from "../../utils/misc.js";
+import { getSliderList } from "https://itspedro.github.io/horizon/utils/misc.js";
 
 const headerIMG = document.querySelector('.header');
 const unitContent = document.querySelector('.main-unidades');
