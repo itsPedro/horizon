@@ -29,11 +29,12 @@
 
 .navbar ul li a {
     text-decoration: none;
-    color: #272727;
+    color: #273435;
+    transition: all 0.3s ease;
 }
 
 .navbar ul li a:hover {
-    color: #009FB7;
+    color: #4484ce;
     text-decoration: underline;
     text-decoration-thickness: 3px;
 }
@@ -44,25 +45,29 @@
     gap: 10px;
 }
 
+.social-links-nav {
+    display: flex;
+}
+
 .social-links-nav a {
-    text-decoration: none;
-    width: 5px;
-    height: 5px;
+    display: flex;
     padding: 5px;
     border-radius: 50%;
-    color: #009FB7;
+    text-decoration: none;
+    color: #4484ce;
+    transition: all 0.3s ease;
 }
 
 
 
 .social-links-nav a:hover {
     color: #EFF1F3;
-    background-color: #009FB7;
+    background-color: #4484ce;
 }
 
 
 .nav-icon {
-    color: #272727;
+    color: #273435;
     display: none;
 }
 
@@ -115,8 +120,8 @@
     }
 
     .nav-icon:hover{
-        background-color:#009FB7;
-        color: #EFF1F3;
+        background-color:#4484ce;
+        color: #ffefc2;
     }
 
     #logo {

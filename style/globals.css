@@ -5,17 +5,23 @@ html, body {
     font-family: 'Inter', sans-serif;
 }
 
+*::selection {
+    background-color: #f0cb5c;
+    color: #273435;
+}
+
 
 .btn {
     border: none;
-    background-color: #009FB7;
-    color:#EFF1F3;
+    background-color: #4484ce;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #FED766;
-    color: #272727;
+    background-color: #ffefc2;
+    color: #273435;
 }

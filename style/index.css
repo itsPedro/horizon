@@ -1,24 +1,24 @@
 .header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    justify-content: flex-end;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     width: 100%;
     height: 700px;
     align-items: center;
+    overflow: hidden;
 }
 
 .header-content {
     grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    background-color: #272727;
-    padding: 30px;
-    border-radius: 8px;
-    color: #EFF1F3;
+    grid-column: 4;
+    text-align: right;
+    margin-right: 300px;
     height: 300px;
     width: 300px;
-    text-align: right;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #222127;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
 }
 
 
@@ -35,7 +35,7 @@
 }
 
 .header-content span {
-    color: #FED766;
+    color: #f19f4d;
     font-size: 13px;
     font-weight: bold;
 }
@@ -45,36 +45,54 @@
 }
 
 .btns-slider-header {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    display: flex;
+    grid-row: 4;
+    grid-column: 3 / 4;
     margin: 20px;
 }
 
 .btn-slider-header {
-    color: #009FB7;
+    color: #4484ce;
     border: none;
     cursor: pointer;
     background-color: transparent;
 }
 
 .active-img {
-    color: #EFF1F3;
+    color: #ffffff;
     padding: 5px;
     border-radius: 50%;
-    background-color: #009FB7;
+    background-color: #4484ce;
 }
 
+/*
+Your selected colors:
+    Text: #273435
+    Primary: #222127 (RGB: 34, 33, 39)
+    Secondary: #d9d9d9 (RGB: 217, 217, 217)
+    Primary Button: #4484ce (RGB: 68, 132, 206)
+    Secondary Button: #ead36c (RGB: 234, 211, 108)
+    Accent: #f19f4d (RGB: 241, 159, 77)
+
+Realtime Colors link for selected colors: https://realtimecolors.com/?colors=222127-d9d9d9-4484ce-ead36c-f19f4d
+
+Thanks for using RealtimeColors.com!
+
+
+
+*/
 .main-sobre {
     display: flex;
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
     height: 500px;
-    background-color: #EFF1F3;
+    background-color: #d9d9d9;
+    color: #273435;
 }
 
 .main-sobre span {
-    color: #FED766;
+    color: #f19f4d;
     position: absolute;
     margin-top: 8px;
     font-size: 13px;
@@ -113,17 +131,18 @@
 
 
 .main-cards {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 800px;
-    gap: 100px;
+    gap: 50px;
 }
 
 .container-cards {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 200px;
 }
 
 .card {
@@ -140,8 +159,8 @@
     width: 20px;
     padding: 20px;
     border-radius: 8px;
-    color: #EFF1F3;
-    background-color: #009FB7;
+    color: #ffffff;
+    background-color: #4484ce;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -151,8 +170,8 @@
 }
 
 .main-unidades {
-    background: linear-gradient(to bottom, #EFF1F3, transparent);
-    color: #272727;
+    background: linear-gradient(to bottom, #d9d9d9, transparent);
+    color: #273435;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,7 +199,7 @@
 .unit-content h1 {
     font-size: 30px;
     font-weight: bold;
-    color: #009FB7;
+    color: #4484ce;
 }
 
 
@@ -203,14 +222,11 @@
     }
 
     .header-content {
+        grid-column: 3;
         margin-right: 10px;
+
     }
     
-    .btns-slider-header {
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-    }
-
     .sobre-text {
         width: 350px;
     }
@@ -221,26 +237,24 @@
     }
 
     .sobre-img img {
-        height: 300px;
-        width: 400px;
+        height: 250px;
+        width: 350px;
     }
 
     .main-cards {
         height: 100%;
     }
 
+
     .container-cards {
         display: flex;
         flex-direction: column;
+        gap: 0;
     }
 
     .unit-content img {
         height: 200px;
-        width: 400px;
+        width: 350px;
     }
 
-
-
-
 }
-
