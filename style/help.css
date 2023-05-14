@@ -38,21 +38,6 @@
     cursor: pointer;
 }
 
-/*
-Your selected colors:
-    
-    Primary: #222127 (RGB: 34, 33, 39)
-    Secondary: #d9d9d9 (RGB: 217, 217, 217)
-    Primary Button: #4484ce (RGB: 68, 132, 206)
-    Secondary Button: #ead36c (RGB: 234, 211, 108)
-    Accent: #f19f4d (RGB: 241, 159, 77)
-
-Realtime Colors link for selected colors: https://realtimecolors.com/?colors=222127-d9d9d9-4484ce-ead36c-f19f4d
-
-Thanks for using RealtimeColors.com!
-
-*/
-
 .question-content h2 {
     font-size: 20px;
     font-weight: bold;
