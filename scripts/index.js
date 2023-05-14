@@ -1,5 +1,4 @@
 const headerIMG = document.querySelector('.header');
-const menuIcon = document.querySelector('.nav-icon');
 const unitContent = document.querySelector('.main-unidades');
 const currentImage = document.querySelector('.current-image');
 const prevImage = document.querySelector('.prev-image');
@@ -63,14 +62,11 @@ class headerSlider {
 
 const headerImagens = [
     new headerSlider([
-        './assets/content-images/header1.jpg',
-        './assets/content-images/header2.jpg'
+        './assets/content-images/index/header1.jpg',
+        './assets/content-images/index/header2.jpg'
     ]),
 ];
 
-menuIcon.addEventListener('click', () => {
-    document.querySelector('.navbar').classList.toggle('active-nav');
-});
 
 class unitImgs {
 
@@ -86,8 +82,8 @@ class unitImgs {
         this.drawnIMG();
         this.createBtn();
         this.activeBtn();
+        this.autoSlider();
     };
-
 
     drawnIMG() {
 
@@ -102,18 +98,16 @@ class unitImgs {
         contImg.classList.add('unit-img');
         prevImg.classList.add('unit-img');
 
-        const imgElement = document.createElement("img");
-        imgElement.alt = "Slider Image";
+        this.images.map((img, index) => {
 
-        const infoElement = document.createElement("div");
-        infoElement.classList.add("unit-info");
+            const imgElement = document.createElement("img");
+            imgElement.alt = "Slider Image";
 
-        const h2Element = document.createElement("h2");
-        const pElement = document.createElement("p");
+            const infoElement = document.createElement("div");
+            infoElement.classList.add("unit-info");
 
-
-    
-        this.images.forEach((img, index) => {
+            const h2Element = document.createElement("h2");
+            const pElement = document.createElement("p");
 
             if (index === this.#currentImgIndex) {
                 contImg.classList.add('on');
@@ -124,30 +118,24 @@ class unitImgs {
                 contImg.appendChild(infoElement);
                 infoElement.appendChild(h2Element);
                 infoElement.appendChild(pElement);
+
+            } else if ((index === this.#currentImgIndex + 1) ||
+                    (this.#currentImgIndex === this.images.length - 1 && index === 0)
+                ) {
+                nextImg.classList.add('border');
+                imgElement.src = img.url;
+                nextImg.appendChild(imgElement);
+
+            } else if ((index === this.#currentImgIndex - 1) ||
+                    (this.#currentImgIndex === 0 && index === this.images.length - 1)
+                ) {
+                prevImg.classList.add('border');
+                imgElement.src = img.url;
+                prevImg.appendChild(imgElement);
             }
-            // } else if ((index < this.images.length) && (index === this.#currentImgIndex + 1)) {
-            //     nextImg.classList.add('border');
-            //     imgElement.src = img.url;
-            //     h2Element.textContent = img.cidade;
-            //     pElement.textContent = img.rua;
-            //     nextImg.appendChild(imgElement);
-            //     nextImg.appendChild(infoElement);
-            //     infoElement.appendChild(h2Element);
-            //     infoElement.appendChild(pElement);
-            // } else if ((index !== 0) && (index === this.#currentImgIndex - 1)) {
-            //     prevImg.classList.add('border');
-            //     imgElement.src = img.url;
-            //     h2Element.textContent = img.cidade;
-            //     pElement.textContent = img.rua;
-            //     prevImg.appendChild(imgElement);
-            //     prevImg.appendChild(infoElement);
-            //     infoElement.appendChild(h2Element);
-            //     infoElement.appendChild(pElement);
-            // }
 
         });
     }
-
 
     createBtn() {
         this.buttonContainer = document.createElement('div');
@@ -165,6 +153,17 @@ class unitImgs {
             });
             return btn;
         });
+        document.querySelector("#btn-next").addEventListener('click', () => {
+            this.#currentImgIndex = (this.#currentImgIndex + 1) % this.images.length;
+            this.drawnIMG();
+            this.activeBtn();
+        });
+        document.querySelector("#btn-prev").addEventListener('click', () => {
+            this.#currentImgIndex = this.#currentImgIndex !== 0 ? (this.#currentImgIndex - 1) % this.images.length : this.images.length - 1;
+            this.drawnIMG();
+            this.activeBtn();
+        });
+
     }
 
     activeBtn() {
@@ -173,26 +172,34 @@ class unitImgs {
         });
     }
 
+    autoSlider() {
+        setInterval(() => {
+            this.#currentImgIndex = (this.#currentImgIndex + 1) % this.images.length;
+            this.drawnIMG();
+            this.activeBtn();
+        }, 8000);
+    }
+
 
 }
 
 let allIMG = new unitImgs([
     {
-        url: "./assets/content-images/unit-1.jpg",
-        cidade: "Cidade1",
-        rua: "Rua1",
-        telefone: "Telefone1"
+        url: "./assets/content-images/index/unit-1.jpg",
+        cidade: "Cidade - 1",
+        rua: "Rua dos Bobos, nº 0",
+        telefone: "(11) 1111-1111"
     },
     {
-        url: "./assets/content-images/unit-2.jpg",
-        cidade: "Cidade2",
-        rua: "Rua2",
-        telefone: "Telefone2"
+        url: "./assets/content-images/index/unit-2.jpg",
+        cidade: "Cidade - 2",
+        rua: "Rua dos Bobos, nº 1",
+        telefone: "(22) 2222-2222"
     },
     {
-        url: "./assets/content-images/unit-3.jpg",
-        cidade: "Cidade3",
-        rua: "Rua3",
-        telefone: "Telefone3"
+        url: "./assets/content-images/index/unit-3.jpg",
+        cidade: "Cidade - 3",
+        rua: "Rua dos Bobos, nº 2",
+        telefone: "(33) 3333-3333"
     },
 ]);

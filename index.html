@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/85395ab2d8.js" crossorigin="anonymous"></script>
     <title>Horizon</title>
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="../style/globals.css">
     <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <nav class="navbar">
         <a href="#">
-            <img src="./assets/favicon.ico" alt="Horizon Logo" id="logo">
+            <img src="./assets/favicon.ico" alt="Horizon Logo" class="logo">
         </a>
         <div class="nav-icon"><i class="fa-solid fa-bars"></i></div>
 
@@ -27,8 +28,9 @@
             <li><a class="nav-link" href="#unidades">Unidades</li></a>
             <li><a class="nav-link" href="#comentarios">Comentários</li></a>
             <li><a class="nav-link" href="#contato">Contato</li></a>
+            <li><a class="nav-link" href="pages/help.html">Dúvidas</li></a>
           </ul>
-          <span class="social-links">
+          <span class="social-links-nav">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
           </span>
@@ -53,12 +55,12 @@
         <button class="btn btn-sobre">Saiba Mais <i class="fa-solid fa-arrow-right"></i></button>
       </div>
       <div class="sobre-img">
-        <img src="./assets/content-images/header3.jpg " alt="Sobre">
+        <img src="./assets/content-images/index/header3.jpg " alt="Sobre">
       </div>
 
     </div>
 
-    <div href="diferenciais" class="main-cards">
+    <div id="diferenciais" class="main-cards">
 
           <h2>Nossos Diferenciais</h2>
 
@@ -105,7 +107,7 @@
           </div>
     </div>
 
-    <div href="unidades" class="main-unidades">
+    <div id="unidades" class="main-unidades">
 
       <h2>Unidades</h2>
 
@@ -113,12 +115,12 @@
         <div class="unit-content">
           <div class="prev-image">
           </div>
-          <button class="btn">
+          <button class="btn" id="btn-prev">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
           <div class="current-image">
           </div>
-          <button class="btn">
+          <button class="btn" id="btn-next">
             <i class="fa-solid fa-arrow-right"></i>
           </button>
           <div class="next-image">
@@ -162,6 +164,7 @@
     </div>
 
 
-    <script src="./index.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/nav.js"></script>
 </body>
 </html>
