@@ -1,6 +1,6 @@
 export async function getQuestionsList() {
     try {
-      const data = await FetchJson("../static/help/questions.json");
+      const data = await FetchJson("https://itspedro.github.io/horizon/static/help/questions.json");
       return data;
     } catch (e) {
       throw new Error("Error: JSON fetch failed");
@@ -9,7 +9,7 @@ export async function getQuestionsList() {
 
 export async function getSliderList() {
     try {
-      const data = await FetchJson("../static/index/slider.json");
+      const data = await FetchJson("https://itspedro.github.io/horizon/static/index/slider.json");
       return data;
     } catch (e) {
       throw new Error("Error: JSON fetch failed");
