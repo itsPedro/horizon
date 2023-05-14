@@ -1,3 +1,5 @@
+import { getSliderList } from "../../utils/misc.js";
+
 const headerIMG = document.querySelector('.header');
 const unitContent = document.querySelector('.main-unidades');
 const currentImage = document.querySelector('.current-image');
@@ -46,8 +48,8 @@ class headerSlider {
 
     activeBtn() {
         this.buttons.forEach((_, index) => {
-            const radioInput = document.getElementById(`header-radio${index}`); 
-            radioInput.classList.add('radio-slider'); 
+            const radioInput = document.getElementById(`header-radio${index}`);
+            radioInput.classList.add('radio-slider');
             radioInput.checked = (index === this.#currentImgIndex);
         });
     };
@@ -122,15 +124,15 @@ class unitImgs {
                 infoElement.appendChild(pElement);
 
             } else if ((index === this.#currentImgIndex + 1) ||
-                    (this.#currentImgIndex === this.images.length - 1 && index === 0)
-                ) {
+                (this.#currentImgIndex === this.images.length - 1 && index === 0)
+            ) {
                 nextImg.classList.add('border');
                 imgElement.src = img.url;
                 nextImg.appendChild(imgElement);
 
             } else if ((index === this.#currentImgIndex - 1) ||
-                    (this.#currentImgIndex === 0 && index === this.images.length - 1)
-                ) {
+                (this.#currentImgIndex === 0 && index === this.images.length - 1)
+            ) {
                 prevImg.classList.add('border');
                 imgElement.src = img.url;
                 prevImg.appendChild(imgElement);
@@ -187,23 +189,5 @@ class unitImgs {
 
 }
 
-let allIMG = new unitImgs([
-    {
-        url: "./assets/content-images/index/unit-1.jpg",
-        cidade: "Cidade - 1",
-        rua: "Rua dos Bobos, nº 0",
-        telefone: "(11) 1111-1111"
-    },
-    {
-        url: "./assets/content-images/index/unit-2.jpg",
-        cidade: "Cidade - 2",
-        rua: "Rua dos Bobos, nº 1",
-        telefone: "(22) 2222-2222"
-    },
-    {
-        url: "./assets/content-images/index/unit-3.jpg",
-        cidade: "Cidade - 3",
-        rua: "Rua dos Bobos, nº 2",
-        telefone: "(33) 3333-3333"
-    }
-]);
+const allIMG = await getSliderList();
+new unitImgs(allIMG);

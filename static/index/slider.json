@@ -1,0 +1,22 @@
+[
+    {
+        "url": "./assets/content-images/index/unit-1.jpg",
+        "cidade": "Cidade - 1",
+        "rua": "Rua dos Bobos, nº 0",
+        "telefone": "(11) 1111-1111"
+    },
+    {
+        "url": "./assets/content-images/index/unit-2.jpg",
+        "cidade": "Cidade - 2",
+        "rua": "Rua dos Bobos, nº 1",
+        "telefone": "(22) 2222-2222"
+    },
+    {
+        "url": "./assets/content-images/index/unit-3.jpg",
+        "cidade": "Cidade - 3",
+        "rua": "Rua dos Bobos, nº 2",
+        "telefone": "(33) 3333-3333"
+    }
+
+
+]
