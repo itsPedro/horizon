@@ -88,7 +88,7 @@
     margin-top: 8px;
     font-size: 13px;
     font-weight: bold;
-    
+    overflow: hidden;
 }
 
 .sobre-text {
@@ -128,6 +128,7 @@
     flex-direction: column;
     height: 650px;
     gap: 50px;
+    overflow: hidden;
 }
 
 .container-cards {
@@ -241,6 +242,10 @@
         display: flex;
         flex-direction: column;
         gap: 0;
+    }
+
+    .main-unidades {
+        height: 500px;
     }
 
     .unit-content img {

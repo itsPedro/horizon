@@ -75,6 +75,7 @@
 
     .navbar {
         justify-content: space-between;
+        overflow: hidden;
     }
 
 
@@ -124,10 +125,10 @@
         color: #ffefc2;
     }
 
-    #logo {
+    .logo {
         display: block;
         cursor: pointer;
-        margin-left: 30px;
+        margin-left: 30px
     }
     
 }

@@ -1,6 +1,7 @@
 .footer {
     width: 100%;
     color: #ffffff;
+    overflow: hidden;
 }
 
 .footer-cols {
