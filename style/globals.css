@@ -1,0 +1,21 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.btn {
+    border: none;
+    background-color: #009FB7;
+    color:#EFF1F3;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FED766;
+    color: #272727;
+}
