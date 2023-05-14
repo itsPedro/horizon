@@ -33,7 +33,7 @@ class headerSlider {
         this.buttons = this.link.map((btn, index) => {
             btn = document.createElement('button');
             btn.classList.add('btn-slider-header');
-            btn.innerHTML = '<i class="fa-solid fa-circle-dot"></i>';
+            btn.innerHTML = `<input type="radio" name="header-btn" id="header-radio${index}">`;
             this.buttonContainer.appendChild(btn);
             btn.addEventListener('click', () => {
                 this.#currentImgIndex = index;
@@ -45,8 +45,10 @@ class headerSlider {
     };
 
     activeBtn() {
-        this.buttons.forEach((btn, index) => {
-            index === this.#currentImgIndex ? btn.classList.add('active-img') : btn.classList.remove('active-img');
+        this.buttons.forEach((_, index) => {
+            const radioInput = document.getElementById(`header-radio${index}`); 
+            radioInput.classList.add('radio-slider'); 
+            radioInput.checked = (index === this.#currentImgIndex);
         });
     };
 
@@ -144,7 +146,7 @@ class unitImgs {
         this.buttons = this.images.map((btn, index) => {
             btn = document.createElement('button');
             btn.classList.add('btn-slider-header');
-            btn.innerHTML = '<i class="fa-solid fa-circle-dot"></i>';
+            btn.innerHTML = `<input type="radio" name="slider-btn" id="slider-radio${index}">`;
             this.buttonContainer.appendChild(btn);
             btn.addEventListener('click', () => {
                 this.#currentImgIndex = index;
@@ -167,8 +169,10 @@ class unitImgs {
     }
 
     activeBtn() {
-        this.buttons.forEach((btn, index) => {
-            index === this.#currentImgIndex ? btn.classList.add('active-img') : btn.classList.remove('active-img');
+        this.buttons.forEach((_, index) => {
+            const radioInput = document.getElementById(`slider-radio${index}`);
+            radioInput.classList.add('radio-slider');
+            radioInput.checked = (index === this.#currentImgIndex);
         });
     }
 
@@ -201,5 +205,5 @@ let allIMG = new unitImgs([
         cidade: "Cidade - 3",
         rua: "Rua dos Bobos, nº 2",
         telefone: "(33) 3333-3333"
-    },
+    }
 ]);

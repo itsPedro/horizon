@@ -48,21 +48,28 @@
     display: flex;
     grid-row: 4;
     grid-column: 3 / 4;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-slider-header {
-    color: #4484ce;
     border: none;
-    cursor: pointer;
     background-color: transparent;
 }
 
-.active-img {
-    color: #ffffff;
-    padding: 5px;
+.radio-slider {
+    appearance: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: #4484ce;
+    background: #ffffff;
+    border: 1px solid #4484ce;
+    transition: all 0.3s ease;
+}
+
+.radio-slider:checked {
+    background: #ffffff;
+    border: 4px solid #4484ce
 }
 
 .main-sobre {
