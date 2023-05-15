@@ -1,19 +1,29 @@
 export async function getQuestionsList() {
-    try {
-      const data = await FetchJson("https://itspedro.github.io/horizon/static/help/questions.json");
-      return data;
-    } catch (e) {
-      throw new Error("Error: JSON fetch failed");
-    }
+  try {
+    const data = await FetchJson("https://itspedro.github.io/horizon/static/help/questions.json");
+    return data;
+  } catch (e) {
+    throw new Error("Error: JSON fetch failed");
+  }
 };
 
+export async function getPosts() {
+  try {
+    const data = await FetchJson("../static/blog/posts.json");
+    return data;
+  } catch (e) {
+    throw new Error("Error: JSON fetch failed");
+  }
+}
+
+
 export async function getSliderList() {
-    try {
-      const data = await FetchJson("https://itspedro.github.io/horizon/static/index/slider.json");
-      return data;
-    } catch (e) {
-      throw new Error("Error: JSON fetch failed");
-    }
+  try {
+    const data = await FetchJson("https://itspedro.github.io/horizon/static/index/slider.json");
+    return data;
+  } catch (e) {
+    throw new Error("Error: JSON fetch failed");
+  }
 };
 
 export async function FetchJson(url) {
@@ -24,4 +34,3 @@ export async function FetchJson(url) {
   const data = await response.json();
   return data;
 };
-  
