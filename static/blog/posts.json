@@ -1,11 +1,11 @@
 [
     {
         "id": "0",
-        "author": "Pedro",
+        "author": "Autor",
         "date": "11/11/1111",
-        "url": "http://img.com",
+        "url": "../../assets/content-images/help/header.jpg",
         "title": "Titulo",
         "description": "descrição",
-        "body": "todo o corpo"
+        "body": "corpo"
     }
 ]

@@ -2,32 +2,64 @@ import { getPosts } from "../utils/misc.js";
 
 class BlogPosts {
 
-    constructor() {
-        this.posts = [];
+    constructor(posts) {
+        this.posts = posts;
         this.container = document.querySelector('.posts');
-        this.template = document.querySelector('.post');
         this.renderPosts();
     }
 
     renderPosts() {
-        const fragment = document.createDocumentFragment();
+        console.log(this.posts)
         this.posts.forEach((post) => {
-            const element = this.template.content.cloneNode(true);
-            element.querySelector('.post-title').innerHTML = post.title;
-            element.querySelector('.post-description').innerHTML = post.description;
-            element.querySelector('.post-date').innerHTML = post.date;
-            element.querySelector('.post-author').innerHTML = post.author;
-            element.querySelector('.post-url').innerHTML = post.url;
 
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            
+            
+            const postLink = document.createElement('a');
+            const postBtn = document.createElement('button');
+            postBtn.classList.add('btn');
+            postBtn.classList.add('post-link');
+            postBtn.textContent = 'Leia Mais';
+            postLink.appendChild(postBtn);
+
+            const postImage = document.createElement('div');
+            const img = document.createElement('img');
+            postImage.classList.add('post-image');
+            img.src = post.url;
+            postImage.appendChild(img);
+
+            const metaData = document.createElement('div');
+            metaData.classList.add('post-metadata');
+            const author = document.createElement('p');
+            author.classList.add('post-author');
+            author.textContent = post.author;
+            const date = document.createElement('p');
+            date.classList.add('post-date');
+            date.textContent = post.date;
+            metaData.appendChild(author);
+            metaData.appendChild(date);
+
+            const postContent = document.createElement('div');
+            postContent.classList.add('post-content');
+            const title = document.createElement('h1');
+            title.classList.add('post-title');
+            title.textContent = post.title;
+            const description = document.createElement('p');
+            description.classList.add('post-description');
+            description.textContent = post.description;
+            postContent.appendChild(title);
+            postContent.appendChild(description);
+            postContent.appendChild(postLink);
+            postContent.appendChild(metaData)
+
+            postElement.appendChild(postImage);
+            postElement.appendChild(postContent);
+            this.container.appendChild(postElement);
         });
-        this.container.appendChild(fragment);
     }
 
 }
 
 const posts = await getPosts();
 new BlogPosts(posts);
-
-console.log(posts)
-
-
