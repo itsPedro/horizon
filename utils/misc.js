@@ -16,6 +16,15 @@ export async function getPosts() {
   }
 }
 
+export async function getPostById(id) {
+  try {
+    const data = await FetchJson(`../static/blog/posts.json`);
+    return data.find((post) => (post.id === id));
+  } catch (e) {
+    throw new Error("Error: JSON fetch failed");
+  }
+}
+
 
 export async function getSliderList() {
   try {

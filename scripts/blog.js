@@ -23,6 +23,10 @@ class BlogPosts {
             postBtn.textContent = 'Leia Mais';
             postLink.appendChild(postBtn);
 
+            postBtn.addEventListener('click', () => {
+                window.location.href = `post.html?id=${post.id}`;
+            });
+
             const postImage = document.createElement('div');
             const img = document.createElement('img');
             postImage.classList.add('post-image');
