@@ -1,7 +1,7 @@
 .posts {
     margin-top: 80px;
     padding: 50px 0;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -44,8 +44,9 @@
 }
 
 .post-image img {
-    width: 300px;
+    width: 320px;
     height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     user-select: none;
     -webkit-user-drag: none;
@@ -61,7 +62,7 @@
     .post {
         flex-direction: column;
         align-items: center;
-        width: auto;
+        width: 80%;
     }
 
 }
