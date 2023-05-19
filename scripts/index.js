@@ -64,14 +64,14 @@ class headerSlider {
 
 };
 
-const headerImagens = [
-    new headerSlider([
+new headerSlider([
         './assets/content-images/index/header1.jpg',
         './assets/content-images/index/header2.jpg'
-    ]),
-];
+]),
 
-
+document.querySelector('.btn-sobre').addEventListener('click', () => {
+    window.location.href = `/pages/post.html?id=0`
+});
 class unitImgs {
 
     #currentImgIndex = 0;

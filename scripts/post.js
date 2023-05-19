@@ -6,7 +6,6 @@ const postId = urlParams.get('id');
 async function fetchPost() {
   try {
     const post = await getPostById(postId);
-    console.log(post);
     const postContentDiv = document.querySelector('.post-main');
 
     postContentDiv.innerHTML = `
