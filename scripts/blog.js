@@ -3,7 +3,7 @@ import { getPosts } from "../utils/misc.js";
 class BlogPosts {
 
     constructor(posts) {
-        this.posts = posts;
+        this.posts = posts.reverse();
         this.container = document.querySelector('.posts');
         this.renderPosts();
     }
