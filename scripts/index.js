@@ -70,7 +70,7 @@ new headerSlider([
 ]),
 
 document.querySelector('.btn-sobre').addEventListener('click', () => {
-    window.location.href = `/pages/post.html?id=0`
+    window.location.href = `/horizon/pages/post.html?id=0`
 });
 class unitImgs {
 
