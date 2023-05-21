@@ -1,3 +1,5 @@
+import { loading } from "../scripts/components/loading.js";
+
 export async function getQuestionsList() {
   try {
     const data = await FetchJson("https://itspedro.github.io/horizon/static/help/questions.json");
@@ -36,10 +38,12 @@ export async function getSliderList() {
 };
 
 export async function FetchJson(url) {
+  loading.show();
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
+  loading.hide();
   const data = await response.json();
   return data;
 };
