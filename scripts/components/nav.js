@@ -14,13 +14,13 @@ class navFactory {
             
             <div class="nav-links">
                 <ul>
-                <li><a class="nav-link" href="${link}index.html"> Inicio</li></a>
-                <li><a class="nav-link" href="${link}index.html#ensinos">Ensinos</li></a>
-                    <li><a class="nav-link" href="${link}index.html#diferenciais">Diferenciais</li></a>
-                    <li><a class="nav-link" href="${link}index.html#ensinos">Ensinos</li></a>
-                    <li><a class="nav-link" href="${link}index.html#unidades">Unidades</li></a>
-                    <li><a class="nav-link" href="${link}pages/blog.html">Blog</li></a>
-                    <li><a class="nav-link" href="${link}pages/help.html">Dúvidas</li></a>
+                <li><a class="nav-link" href="${link}index.html"> INICIO</li></a>
+                <li><a class="nav-link" href="${link}index.html#sobre">SOBRE</li></a>
+                    <li><a class="nav-link" href="${link}index.html#diferenciais">DIFERENCIAIS</li></a>
+                    <li><a class="nav-link" href="${link}index.html#ensinos">ENSINOS</li></a>
+                    <li><a class="nav-link" href="${link}index.html#unidades">UNIDADES</li></a>
+                    <li><a class="nav-link" href="${link}pages/blog.html">BLOG</li></a>
+                    <li><a class="nav-link" href="${link}pages/help.html">DÚVIDAS</li></a>
                 </ul>
                 <span class="social-links-nav">
                     <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
