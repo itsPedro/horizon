@@ -5,21 +5,22 @@ class navFactory {
     }
     
     createNav() {
+        const link = 'https://itspedro.github.io/horizon/';
         navContent.innerHTML = `
             <a href="../horizon/index.html">
-                <img src="https://itspedro.github.io/horizon/assets/Horizon-logo.png" alt="Horizon Logo" class="logo">
+                <img src="${link}assets/Horizon-logo.png" alt="Horizon Logo" class="logo">
             </a>
             <div class="nav-icon"><i class="fa-solid fa-bars"></i></div>
             
             <div class="nav-links">
                 <ul>
-                <li><a class="nav-link" href="../horizon/index.html"> Inicio</li></a>
-                <li><a class="nav-link" href="../horizon/index.html#ensinos">Ensinos</li></a>
-                    <li><a class="nav-link" href="../horizon/index.html#diferenciais">Diferenciais</li></a>
-                    <li><a class="nav-link" href="../horizon/index.html#ensinos">Ensinos</li></a>
-                    <li><a class="nav-link" href="../horizon/index.html#unidades">Unidades</li></a>
-                    <li><a class="nav-link" href="../horizon/pages/blog.html">Blog</li></a>
-                    <li><a class="nav-link" href="../horizon/pages/help.html">Dúvidas</li></a>
+                <li><a class="nav-link" href="${link}index.html"> Inicio</li></a>
+                <li><a class="nav-link" href="${link}index.html#ensinos">Ensinos</li></a>
+                    <li><a class="nav-link" href="${link}index.html#diferenciais">Diferenciais</li></a>
+                    <li><a class="nav-link" href="${link}index.html#ensinos">Ensinos</li></a>
+                    <li><a class="nav-link" href="${link}index.html#unidades">Unidades</li></a>
+                    <li><a class="nav-link" href="${link}pages/blog.html">Blog</li></a>
+                    <li><a class="nav-link" href="${link}pages/help.html">Dúvidas</li></a>
                 </ul>
                 <span class="social-links-nav">
                     <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
