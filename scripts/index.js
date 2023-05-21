@@ -72,6 +72,20 @@ new headerSlider([
 document.querySelector('.btn-sobre').addEventListener('click', () => {
     window.location.href = `/horizon/pages/post.html?id=0`
 });
+
+document.querySelector('#fundamental-1').addEventListener('click', () => {
+    window.location.href = `/horizon/pages/post.html?id=1`
+});
+
+document.querySelector('#fundamental-2').addEventListener('click', () => {
+    window.location.href = `/horizon/pages/post.html?id=2`
+});
+
+document.querySelector('#ensino-medio').addEventListener('click', () => {
+    window.location.href = `/horizon/pages/post.html?id=3`
+});
+
+
 class unitImgs {
 
     #currentImgIndex = 0;
