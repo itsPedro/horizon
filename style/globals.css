@@ -45,4 +45,12 @@ html, body {
     font-size: 50px;
     margin-bottom: 20px;
 }
+
+.underline-detail {
+    display: inline-block;
+    background: linear-gradient(to top, #ffefc2 20%, transparent 80%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
   
