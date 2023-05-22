@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "volleyball",
+    "info": "Esportes",
+    "description": "Aulas que ajudam a desenvolver habilidades físicas, como coordenação motora, força e resistência, além de ensinar valores como disciplina, respeito e espírito de equipe."
+  },
+  {
+    "icon": "guitar",
+    "info": "Música",
+    "description": "Aulas de instrumentos musicais, canto, teoria musical e outras atividades que ajudam a desenvolver a habilidade musical dos alunos."
+  },
+  {
+    "icon": "palette",
+    "info": "Arte",
+    "description": "Aulas de artes plásticas, teatro, dança e outras atividades que ajudam a desenvolver a criatividade e a expressão artística dos alunos."
+  },
+  {
+    "icon": "language",
+    "info": "Línguas",
+    "description": "Aulas de idiomas que ajudam a desenvolver a comunicação em outras línguas, ampliando as possibilidades de comunicação e relacionamento com pessoas de outras culturas."
+  }
+]

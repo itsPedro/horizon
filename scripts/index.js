@@ -1,16 +1,9 @@
-import { getSliderList } from "https://itspedro.github.io/horizon/utils/misc.js";
-
-const headerIMG = document.querySelector('.header');
-const unitContent = document.querySelector('.main-unidades');
-const currentImage = document.querySelector('.current-image');
-const prevImage = document.querySelector('.prev-image');
-const nextImage = document.querySelector('.next-image');
-const sliderButton = document.querySelector(".sliderButton");
-
+import { getPostById, getSliderList, getDifferentialsList, getEnsinosList } from "../utils/misc.js";
 class headerSlider {
-
+    
     #currentImgIndex = 0;
     buttons;
+    headerIMG = document.querySelector('.header');
 
     constructor(link) {
         this.link = link;
@@ -25,13 +18,13 @@ class headerSlider {
     };
 
     createImg() {
-        headerIMG.style.backgroundImage = `url(${this.link[this.#currentImgIndex]})`;
+        this.headerIMG.style.backgroundImage = `url(${this.link[this.#currentImgIndex]})`;
     };
 
     createBtn() {
         this.buttonContainer = document.createElement('div');
         this.buttonContainer.classList.add('btns-slider-header');
-        headerIMG.appendChild(this.buttonContainer);
+        this.headerIMG.appendChild(this.buttonContainer);
         this.buttons = this.link.map((btn, index) => {
             btn = document.createElement('button');
             btn.classList.add('btn-slider-header');
@@ -67,29 +60,88 @@ class headerSlider {
 new headerSlider([
         './assets/content-images/index/header1.jpg',
         './assets/content-images/index/header2.jpg'
-]),
+]);
 
 document.querySelector('.btn-sobre').addEventListener('click', () => {
     window.location.href = `/horizon/pages/post.html?id=0`
 });
 
-document.querySelector('#fundamental-1').addEventListener('click', () => {
-    window.location.href = `/horizon/pages/post.html?id=1`
-});
+class differentialsContent {
+    
+    
+    constructor(differentials) {
+        this.differentials = differentials;
+        this.createDifferentials();
+    }
+    
+    createDifferentials() {
+        const diferenciaisContent = document.querySelector('.diferenciais-content');
 
-document.querySelector('#fundamental-2').addEventListener('click', () => {
-    window.location.href = `/horizon/pages/post.html?id=2`
-});
+        diferenciaisContent.innerHTML = this.differentials.reduce((acc, cur) => {
+            return acc += `
+            
+            <div class="card">
+                <i class="fa-solid fa-${cur.icon}"></i>
+                <p class="info">${cur.info}</p>
+                <p class="description">
+                    ${cur.description}
+                </p>
+            </div>
+            
+            `;
+        }, '');
+    }
+};
 
-document.querySelector('#ensino-medio').addEventListener('click', () => {
-    window.location.href = `/horizon/pages/post.html?id=3`
-});
+const diferenciais = await getDifferentialsList();
+new differentialsContent(diferenciais);
 
+
+class ensinosContent {
+    
+        constructor(ensinos) {
+            this.ensinos = ensinos;
+            this.createEnsinos();
+        }
+
+        postRedirect(id) {
+            document.querySelector(`[id="${id}"]`).addEventListener('click', () => {
+                window.location.href = `/horizon/pages/post.html?id=${id}`;
+            });
+        }
+
+    
+        createEnsinos() {
+            const ensinosContent = document.querySelector('.ensinos-content');
+            
+            this.ensinos.forEach(async (ensino) => {
+                const ensinoPost = await getPostById(ensino.postID);
+                ensinosContent.innerHTML += `
+                <div class="ensino">
+                    <span>${ensino.span}</span>
+                    <h2>${ensinoPost.title}</h2>
+                    <div class="ensino-img-content">
+                        <button class="btn btn-ensinos" id="${ensinoPost.id}" >Saiba mais</button>
+                        <img src="${ensinoPost.url}" alt="${ensinoPost.title}">
+                    </div>
+                </div>
+                `;
+                this.postRedirect(ensinoPost.id);
+            });
+        }
+};
+
+const ensinos = await getEnsinosList();
+new ensinosContent(ensinos);
 
 class unitImgs {
 
     #currentImgIndex = 0;
     buttons;
+    unitContent = document.querySelector('.main-unidades');
+    currentImage = document.querySelector('.current-image');
+    prevImage = document.querySelector('.prev-image');
+    nextImage = document.querySelector('.next-image');
 
     constructor(images) {
         this.images = images;
@@ -105,13 +157,12 @@ class unitImgs {
 
     drawnIMG() {
 
-
-        currentImage.innerHTML = "";
-        nextImage.innerHTML = "";
-        prevImage.innerHTML = "";
-        const contImg = currentImage.appendChild(document.createElement("div"));
-        const nextImg = nextImage.appendChild(document.createElement("div"));
-        const prevImg = prevImage.appendChild(document.createElement("div"));
+        this.currentImage.innerHTML = "";
+        this.nextImage.innerHTML = "";
+        this.prevImage.innerHTML = "";
+        const contImg = this.currentImage.appendChild(document.createElement("div"));
+        const nextImg = this.nextImage.appendChild(document.createElement("div"));
+        const prevImg = this.prevImage.appendChild(document.createElement("div"));
         nextImg.classList.add('unit-img');
         contImg.classList.add('unit-img');
         prevImg.classList.add('unit-img');
@@ -158,7 +209,7 @@ class unitImgs {
     createBtn() {
         this.buttonContainer = document.createElement('div');
         this.buttonContainer.classList.add('btns-slider-units');
-        unitContent.appendChild(this.buttonContainer);
+        this.unitContent.appendChild(this.buttonContainer);
         this.buttons = this.images.map((btn, index) => {
             btn = document.createElement('button');
             btn.classList.add('btn-slider-header');
