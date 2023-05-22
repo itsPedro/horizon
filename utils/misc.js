@@ -30,7 +30,7 @@ export async function getPostById(id) {
 
 export async function getSliderList() {
   try {
-    const data = await FetchJson("../static/index/slider.json");
+    const data = await FetchJson("https:/itspedro.github.io/horizon/static/index/slider.json");
     return data;
   } catch (e) {
     throw new Error("Error: JSON fetch failed getting slider list.");
@@ -39,7 +39,7 @@ export async function getSliderList() {
 
 export async function getDifferentialsList() {
   try {
-    const data = await FetchJson("../static/index/diferenciais.json");
+    const data = await FetchJson("https:/itspedro.github.io/horizon/static/index/diferenciais.json");
     return data;
   } catch (e) {
     throw new Error("Error: JSON fetch failed getting differentials.");
@@ -48,7 +48,7 @@ export async function getDifferentialsList() {
 
 export async function getEnsinosList() {
   try {
-    const data = await FetchJson("../static/index/ensinos.json");
+    const data = await FetchJson("https:/itspedro.github.io/horizon/static/index/ensinos.json");
     return data;
   } catch (e) {
     throw new Error("Error: JSON fetch failed getting ensinos.");
