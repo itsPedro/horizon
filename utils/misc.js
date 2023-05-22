@@ -56,13 +56,12 @@ export async function getEnsinosList() {
 };
 
 export async function FetchJson(url) {
-  try {
-    loading.show();
-    const response = await fetch(url);
-    const data = await response.json();
-    loading.hide();
-    return data;
-  } catch (error) {
+  loading.show();
+  const response = await fetch(url);
+  if(!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}.`);
-  }
+  };
+  const data = await response.json();
+  loading.hide();
+  return data;
 };
