@@ -2,7 +2,7 @@ import { loading } from "../scripts/components/loading.js";
 
 export async function getQuestionsList() {
   try {
-    const data = await FetchJson("../static/help/questions.json");
+    const data = await FetchJson("https://itspedro.github.io/horizon/static/help/questions.json");
     return data;
   } catch (e) {
     throw new Error("Error: JSON fetch failed getting questions.");
@@ -11,7 +11,7 @@ export async function getQuestionsList() {
 
 export async function getPosts() {
   try {
-    const data = await FetchJson("../static/blog/posts.json");
+    const data = await FetchJson("https://itspedro.github.io/horizon/static/blog/posts.json");
     return data;
   } catch (e) {
     throw new Error("Error: JSON fetch failed getting posts.");
@@ -20,7 +20,7 @@ export async function getPosts() {
 
 export async function getPostById(id) {
   try {
-    const data = await FetchJson(`../static/blog/posts.json`);
+    const data = await FetchJson(`https://itspedro.github.io/horizon/static/blog/posts.json`);
     return data.find((post) => (post.id === id));
   } catch (e) {
     throw new Error("Error: JSON fetch failed getting post.");
