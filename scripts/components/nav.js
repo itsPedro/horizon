@@ -7,7 +7,7 @@ class navFactory {
     createNav() {
         const link = 'https://itspedro.github.io/horizon/';
         navContent.innerHTML = `
-            <a href="../horizon/index.html">
+            <a href="${link}index.html">
                 <img src="${link}assets/Horizon-logo.png" alt="Horizon Logo" class="logo">
             </a>
             <div class="nav-icon"><i class="fa-solid fa-bars"></i></div>

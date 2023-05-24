@@ -17,15 +17,15 @@ class footerFactory {
                 <h3>Suporte</h3>
                 <ul>
                     <li><a href="${link}pages/help.html">FAQ</a></li>
-                    <li><a href="${link}blog.html">Blog</a></li>
+                    <li><a href="${link}pages/blog.html">Blog</a></li>
                     <li><a href="${link}index.html#unidades">Unidades</a></li>
                 </ul>
             </div>
             <div class="legal footer-col">
                 <h3>legal</h3>
                 <ul>
-                    <li><a href="${link}pages/privacy.html">Política de Privacidade</a></li>
-                    <li><a href="${link}pages/terms.html">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
                 </ul>
             </div>
             <div class="contact footer-col">
