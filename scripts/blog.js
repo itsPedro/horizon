@@ -9,7 +9,7 @@ class BlogPosts {
     }
 
     renderPosts() {
-        console.log(this.posts)
+        
         this.posts.forEach((post) => {
 
             const postElement = document.createElement('div');

@@ -25,3 +25,32 @@ html, body {
     background-color: #ffefc2;
     color: #273435;
 }
+
+.loading-modal {
+    position: fixed;
+    color:#232327;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.loading-modal i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.underline-detail {
+    display: inline-block;
+    background: linear-gradient(to top, #ffefc2 20%, transparent 80%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+  

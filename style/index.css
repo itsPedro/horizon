@@ -76,7 +76,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    overflow: hidden;
     height: 500px;
     background-color: #d9d9d9;
     color: #273435;
@@ -88,17 +87,10 @@
     margin-top: 8px;
     font-size: 13px;
     font-weight: bold;
-    overflow: hidden;
 }
 
 .sobre-text {
     width: 400px;
-}
-
-
-.sobre-text h2 {
-    font-size: 25px;
-    font-weight: 800;
 }
 
 .sobre-text h3 {
@@ -120,20 +112,29 @@
     filter: brightness(90%);
 }
 
+.title-section {
+    font-size: 40px;
+    font-weight: 800;
+}
 
-.main-cards {
+.main-diferenciais {
     margin-top: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 650px;
+    height: 800px;
     gap: 50px;
 }
 
-.container-cards {
+
+.diferenciais-content {
     display: flex;
-    align-items: center;
-    gap: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    overflow: wrap;
+    gap: 100px;
 }
 
 .card {
@@ -155,13 +156,63 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.main-unidades {
-    height: 800px;
+.main-ensinos {
+    height: 700px;
     margin-top: 100px;
+    background: linear-gradient(to bottom, #d9d9d9, transparent);
+    color: #273435;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ensinos-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.ensinos-content img {
+    height: 420px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    filter: brightness(80%);
+}
+
+.ensino {
+    display: flex;
+    flex-direction: column;
+}
+
+.ensino span {
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 8px;
+    color: #f19f4d;
+
+}
+
+.ensino-img-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.btn-ensinos {
+    position: absolute;
+    margin: 20px;
+    z-index: 1;
 }
 
 .main-unidades {
-    background: linear-gradient(to bottom, #d9d9d9, transparent);
+    height: 700px;
     color: #273435;
     display: flex;
     align-items: center;
@@ -204,8 +255,19 @@
     height: 800px;
 }
 
+@media (max-width: 1573px) {
+    .diferenciais-content {
+        width: 70%;
+        gap: 0;
+    }
+}
+
 
 @media (max-width: 750px) {
+
+    .title-section {
+        font-size: 30px;
+    }
 
     .header {
         background-size: contain;
@@ -215,7 +277,6 @@
     .header-content {
         grid-column: 3;
         margin-right: 10px;
-
     }
     
     .sobre-text {
@@ -232,15 +293,27 @@
         width: 350px;
     }
 
-    .main-cards {
+    .main-diferenciais {
         height: 100%;
     }
 
+    .diferenciais-content {
+        width: 100%;
+        gap: 0;
+    }
 
-    .container-cards {
+    .main-ensinos {
+        height: 100%;
+    }
+
+    .ensinos-content {
         display: flex;
         flex-direction: column;
-        gap: 0;
+    }
+
+    .ensino img {
+        height: 370px;
+        width: 350px;
     }
 
     .main-unidades {

@@ -5,25 +5,26 @@ class navFactory {
     }
     
     createNav() {
+        const link = 'https://itspedro.github.io/horizon/';
         navContent.innerHTML = `
-            <a href="../index.html">
-                <img src="../assets/Horizon-logo.png" alt="Horizon Logo" class="logo">
+            <a href="../horizon/index.html">
+                <img src="${link}assets/Horizon-logo.png" alt="Horizon Logo" class="logo">
             </a>
             <div class="nav-icon"><i class="fa-solid fa-bars"></i></div>
             
             <div class="nav-links">
                 <ul>
-                <li><a class="nav-link" href="../index.html"> Inicio</li></a>
-                <li><a class="nav-link" href="../index.html#ensinos">Ensinos</li></a>
-                    <li><a class="nav-link" href="../index.html#diferenciais">Diferenciais</li></a>
-                    <li><a class="nav-link" href="../index.html#ensinos">Ensinos</li></a>
-                    <li><a class="nav-link" href="../index.html#unidades">Unidades</li></a>
-                    <li><a class="nav-link" href="../pages/blog.html">Blog</li></a>
-                    <li><a class="nav-link" href="../pages/help.html">Dúvidas</li></a>
+                <li><a class="nav-link" href="${link}index.html"> INICIO</li></a>
+                <li><a class="nav-link" href="${link}index.html#sobre">SOBRE</li></a>
+                    <li><a class="nav-link" href="${link}index.html#diferenciais">DIFERENCIAIS</li></a>
+                    <li><a class="nav-link" href="${link}index.html#ensinos">ENSINOS</li></a>
+                    <li><a class="nav-link" href="${link}index.html#unidades">UNIDADES</li></a>
+                    <li><a class="nav-link" href="${link}pages/blog.html">BLOG</li></a>
+                    <li><a class="nav-link" href="${link}pages/help.html">DÚVIDAS</li></a>
                 </ul>
                 <span class="social-links-nav">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                 </span>
             </div>
             
