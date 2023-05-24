@@ -27,11 +27,13 @@
             <span>BEM VINDO A HORIZON</span>
             <h1>Expandindo horizontes</h1>
             <p>Queremos que cada estudante que passe por aqui tenha a oportunidade de conhecer diferentes perspectivas, culturas e ideias, sempre com o objetivo de enriquecer o seu repertório pessoal e profissional. </p>
-            <button class="btn btn-header">Matricule-se <i class="fa-solid fa-arrow-right"></i></button>
+            <a href="./#matricule-se">
+              <button class="btn btn-header">Matricule-se <i class="fa-solid fa-arrow-right"></i></button>
+            </a>
         </div>
 
     </div>
-    <div href="sobre" class="main-sobre">
+    <div id="sobre" class="main-sobre">
       <div class="sobre-text">
         <span>SOBRE NÓS</span>
         <h2 class="title-section">História da Nossa Escola<h2>
@@ -85,6 +87,31 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="matricule-se" class="main-matricula">
+      <h2 class="title-section">Matricule-se</h2>
+      <form class="matricula-form">  
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" id="telefone">
+        <label for="unidade">Unidade</label>
+        <select name="unidade" id="unidade">
+          <option value="1">Unidade 1</option>
+          <option value="2">Unidade 2</option>
+          <option value="3">Unidade 3</option>
+        </select>
+        <label for="curso">Curso</label>
+        <select name="curso" id="curso">
+          <option value="1">Fundamental I</option>
+          <option value="2">Fundamental II</option>
+          <option value="3">Ensino Médio</option>
+        </select>
+        <button type="submit" class="btn btn-matricula">Matricule-se</button>
+      </form>
     </div>
 
     <div class="footer" id="contato"></div>

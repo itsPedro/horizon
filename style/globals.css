@@ -21,6 +21,14 @@ html, body {
     transition: all 0.3s ease;
 }
 
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
 .btn:hover {
     background-color: #ffefc2;
     color: #273435;

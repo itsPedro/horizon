@@ -250,9 +250,46 @@
     filter: brightness(80%);
 }
 
-.comments {
-    margin-top: 100px;
+.main-matricula {
     height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #273435;
+    color: #ffffff;
+}
+
+.matricula-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.matricula-form input {
+    height: 15px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.matricula-form input:focus {
+    outline: none;
+}
+
+.matricula-form label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.matricula-form select {
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 @media (max-width: 1573px) {
