@@ -23,11 +23,10 @@ class headerSlider {
 
     createBtn() {
         this.buttonContainer = document.createElement('div');
-        this.buttonContainer.classList.add('btns-slider-header');
+        this.buttonContainer.classList.add('radios-slider');
         this.headerIMG.appendChild(this.buttonContainer);
         this.buttons = this.link.map((btn, index) => {
-            btn = document.createElement('button');
-            btn.classList.add('btn-slider-header');
+            btn = document.createElement('div');
             btn.innerHTML = `<input type="radio" name="header-btn" id="header-radio${index}">`;
             this.buttonContainer.appendChild(btn);
             btn.addEventListener('click', () => {
@@ -208,11 +207,10 @@ class unitImgs {
 
     createBtn() {
         this.buttonContainer = document.createElement('div');
-        this.buttonContainer.classList.add('btns-slider-units');
+        this.buttonContainer.classList.add('radios-slider');
         this.unitContent.appendChild(this.buttonContainer);
         this.buttons = this.images.map((btn, index) => {
-            btn = document.createElement('button');
-            btn.classList.add('btn-slider-header');
+            btn = document.createElement('div');
             btn.innerHTML = `<input type="radio" name="slider-btn" id="slider-radio${index}">`;
             this.buttonContainer.appendChild(btn);
             btn.addEventListener('click', () => {
