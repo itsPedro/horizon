@@ -104,7 +104,8 @@ class ensinosContent {
         }
 
         postRedirect(id) {
-            document.querySelector(`[id="${id}"]`).addEventListener('click', () => {
+            const btnEnsinos = document.getElementById(id);
+            btnEnsinos.addEventListener('click', () => {
                 window.location.href = `/horizon/pages/post.html?id=${id}`;
             });
         }
@@ -254,3 +255,34 @@ class unitImgs {
 
 const allIMG = await getSliderList();
 new unitImgs(allIMG);
+
+class formHandler {
+    constructor() {
+        this.form = document.querySelector('.matricula-form');
+        this.form.addEventListener('submit', this.handleSubmit.bind(this));
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+        const check = this.checkTel(data);
+        if (check) {
+            console.log(data);
+        } else {
+            alert("Telefone inválido");
+        }
+        this.form.reset();
+    }
+
+    checkTel(data) {
+        const regex = /^\(?\d{2}\)?[-.\s]?\d{4,5}[-.\s]?\d{4}$/;
+        if (regex.test(data.telefone)) {
+            return true;
+        }
+        return false;
+    }
+
+}
+
+new formHandler();
