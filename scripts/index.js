@@ -1,4 +1,5 @@
 import { getPostById, getSliderList, getDifferentialsList, getEnsinosList } from "../utils/misc.js";
+import eventFactory from "../utils/events.js";
 class headerSlider {
     
     #currentImgIndex = 0;
@@ -266,16 +267,38 @@ class formHandler {
         event.preventDefault();
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
-        const check = this.checkTel(data);
-        if (check) {
-            console.log(data);
-        } else {
-            alert("Telefone inválido");
-        }
+        const check = this.validate(data);
+        check && eventFactory.successMessage(`Olá ${data.nome}, sua matrícula foi realizada com sucesso!`);
         this.form.reset();
     }
 
-    checkTel(data) {
+    validate(data) {
+        if (data.nome === '') {
+            eventFactory.errorMessage('Nome inválido');
+            return false;
+        }
+
+        if (!this.validateEmail(data)) {
+            eventFactory.errorMessage('Email inválido');
+            return false;
+        }
+
+        if (!this.validatePhone(data)) {
+            eventFactory.errorMessage('Telefone inválido');
+            return false;
+        }
+        return true;
+    }
+
+    validateEmail(data) {
+        const regex = /\S+@\S+\.\S+/;
+        if (regex.test(data.email)) {
+            return true;
+        }
+        return false;
+    }
+
+    validatePhone(data) {
         const regex = /^\(?\d{2}\)?[-.\s]?\9\d{4}[-.\s]?\d{4}$/;
         if (regex.test(data.telefone)) {
             return true;

@@ -10,7 +10,6 @@ html, body {
     color: #273435;
 }
 
-
 .btn {
     border: none;
     background-color: #4484ce;
@@ -61,4 +60,55 @@ html, body {
     background-repeat: no-repeat;
     background-position: bottom;
 }
-  
+
+.eventMessage {
+    position: fixed;
+    color: #ffffff;
+    background-color: #232327;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    top: 0;
+    right: 0;
+    margin: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    animation: slide-in 0.5s ease;
+    z-index: 2;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.error {
+    background-color: #cf8987;
+}
+
+.success {
+    background-color: #87cf89;
+}
+
+
+.eventIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.closeEvent {
+    cursor: pointer;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
