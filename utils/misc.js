@@ -1,4 +1,4 @@
-import { loading } from "../scripts/components/loading.js";
+import { loading } from "./loading.js";
 
 export async function getQuestionsList() {
   try {
