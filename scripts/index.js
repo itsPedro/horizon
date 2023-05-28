@@ -276,7 +276,7 @@ class formHandler {
     }
 
     checkTel(data) {
-        const regex = /^\(?\d{2}\)?[-.\s]?\d{4,5}[-.\s]?\d{4}$/;
+        const regex = /^\(?\d{2}\)?[-.\s]?\9\d{4}[-.\s]?\d{4}$/;
         if (regex.test(data.telefone)) {
             return true;
         }
