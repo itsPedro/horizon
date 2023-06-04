@@ -1,5 +1,5 @@
-import { UsersMethods } from "../../types/UsersMethods";
-import { User } from "../models/User";
+import { UsersMethods } from "../types/UsersMethods";
+import { User } from "../entities/User";
 
 interface CreateUserDTO {
   name: string;
@@ -7,22 +7,19 @@ interface CreateUserDTO {
   password: string;
 }
 
-export class CreateUser {
+class CreateUser {
+  constructor(private usersMethods: UsersMethods) {}
 
-  constructor(
-    private usersMethods: UsersMethods
-  ){}
-
-  async execute(data: CreateUserDTO ){
+  async execute(data: CreateUserDTO) {
     const userAlreadyExists = await this.usersMethods.findByEmail(data.email);
 
-    if(userAlreadyExists){
-      throw new Error('User already exists.');
+    if (userAlreadyExists) {
+      throw new Error("User already exists.");
     }
 
     const newUser = new User(data);
     await this.usersMethods.create(newUser);
-
   }
-
 }
+
+export { CreateUser };
